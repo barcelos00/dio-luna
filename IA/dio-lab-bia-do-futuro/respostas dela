@@ -1,0 +1,49 @@
+### 1️⃣ Sobre saldo
+Você pode perguntar:
+  - Estou no vermelho?
+  - Como está meu saldo?
+  - Meu saldo está negativo?
+  - Estou positivo ou negativo?
+Ela responde dizendo se você está no vermelho ou com saldo positivo.
+
+###Sobre maior gasto
+Você pode perguntar:
+  - Qual meu maior gasto?
+  - Qual foi minha maior despesa?
+  - Em qual categoria eu mais gasto?
+  - Onde eu mais gasto dinheiro?
+Ela identifica a categoria com maior valor.
+
+###3️⃣ Sobre mês com maior despesa
+Você pode perguntar:
+  - Em que mês eu mais gastei?
+  - Qual foi o mês de maior gasto?
+  -m Qual mês teve maior despesa?
+  - Ela usa a evolução mensal e responde o mês com maior valor.
+
+###4️⃣ Sobre categorias específicas (dinâmico)
+Ela detecta qualquer categoria que exista no seu CSV.
+Exemplos:
+  - Quanto gastei com alimentação?
+  - Quanto gastei com transporte?
+  - Quanto gastei com moradia?
+  - Quanto gastei com lazer?
+  - Quanto gastei com saúde?
+Ela responde:
+  Valor gasto
+  Percentual sobre a renda
+  Isso funciona para qualquer categoria que esteja registrada.
+
+###5️⃣ Sobre economia
+Você pode perguntar:
+- Quanto devo economizar?
+- Quanto devo poupar?
+- Como posso economizar?
+Ela calcula 20% da sua renda como meta.
+
+###6️⃣ Análise geral
+Você pode perguntar:Faça uma análise, Faça um resumo, Me dê um resumo financeiro, Mostre um resumo, 
+Ela retorna:
+- Total de receitas
+- Total de despesas
+- Percentual comprometido

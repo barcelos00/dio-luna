@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luna - Chat Financeiro</title>
+</head>
+<body>
+
+<h1>Chat com a Luna</h1>
+
+<form method="POST">
+    <input type="text" name="pergunta" placeholder="Digite sua pergunta..." required>
+    <button type="submit">Perguntar</button>
+</form>
+
+{% if pergunta %}
+    <h3>Sua pergunta:</h3>
+    <p>{{ pergunta }}</p>
+
+    <h3>Resposta da Luna:</h3>
+    <p>{{ resposta }}</p>
+{% endif %}
+
+<a href="/">Voltar ao Dashboard</a>
+
+</body>
+</html>

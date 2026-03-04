@@ -1,0 +1,25 @@
+{
+  "nome": "Mariana Costa",
+  "idade": 27,
+  "profissao": "Analista Administrativa",
+  "renda_mensal": 4200.00,
+  "objetivo_principal": "Organizar orçamento e criar reserva de emergência",
+  "total_guardado_atual": 4000.00,
+  "metodo_orcamentario_preferido": "50-30-20",
+  "gastos_fixos_estimados": 1700.00,
+  "gastos_variaveis_estimados": 905.90,
+  "metas": [
+    {
+      "meta": "Reserva de emergência",
+      "valor_necessario": 12000.00,
+      "valor_atual": 4000.00,
+      "prazo": "2026-12"
+    },
+    {
+      "meta": "Viagem internacional",
+      "valor_necessario": 8000.00,
+      "valor_atual": 1500.00,
+      "prazo": "2027-07"
+    }
+  ]
+}

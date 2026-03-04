@@ -1,0 +1,32 @@
+[
+  {
+    "nome": "Método 50-30-20",
+    "categoria": "metodo_orcamentario",
+    "descricao": "Divide a renda em 50% necessidades, 30% qualidade de vida e 20% metas/poupança",
+    "indicado_para": "Quem quer uma estrutura simples para organizar o orçamento mensal"
+  },
+  {
+    "nome": "Orçamento Base Zero",
+    "categoria": "metodo_orcamentario",
+    "descricao": "Cada real da renda recebe uma função específica até o saldo ficar zerado",
+    "indicado_para": "Quem deseja controle total sobre para onde o dinheiro está indo"
+  },
+  {
+    "nome": "Regra dos 30% para Moradia",
+    "categoria": "referencia_orcamentaria",
+    "descricao": "Sugere que os gastos com moradia não ultrapassem 30% da renda mensal",
+    "indicado_para": "Quem quer avaliar se o custo de moradia está equilibrado"
+  },
+  {
+    "nome": "Reserva de Emergência",
+    "categoria": "planejamento_financeiro",
+    "descricao": "Valor guardado equivalente a 3 a 6 meses de despesas essenciais",
+    "indicado_para": "Quem busca segurança financeira contra imprevistos"
+  },
+  {
+    "nome": "Controle de Gastos por Categoria",
+    "categoria": "organizacao_financeira",
+    "descricao": "Classificação das despesas em grupos como moradia, alimentação, transporte e lazer",
+    "indicado_para": "Quem quer identificar padrões de consumo e possíveis excessos"
+  }
+]
