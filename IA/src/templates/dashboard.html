@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Luna - Dashboard Financeiro</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Dashboard Financeiro - Luna</h1>
+<a href="/chat">Ir para Chat da Luna</a>
+
+<!-- FILTRO POR MÊS -->
+<form method="GET">
+    <label>Filtrar por mês (YYYY-MM):</label>
+    <input type="month" name="mes">
+    <button type="submit">Filtrar</button>
+</form>
+
+<div class="resumo">
+    <p><strong>Receitas:</strong> R$ {{ receitas }}</p>
+    <p><strong>Despesas:</strong> R$ {{ despesas }}</p>
+    <p><strong>Saldo:</strong> R$ {{ saldo }}</p>
+</div>
+
+<div class="graficos">
+
+    <h2>Despesas por Categoria</h2>
+    <canvas id="pizzaChart" width="300" height="300"></canvas>
+
+    <h2>Receitas vs Despesas</h2>
+    <canvas id="barraChart"></canvas>
+
+    <h2>Evolução Mensal de Despesas</h2>
+    <canvas id="linhaChart"></canvas>
+
+</div>
+
+<!-- FORMULÁRIO PARA ADICIONAR TRANSAÇÃO -->
+<div class="formulario">
+    <h2>Adicionar Nova Transação</h2>
+    <form method="POST" action="/add">
+        <input type="date" name="data" required>
+        <input type="text" name="descricao" placeholder="Descrição" required>
+        <input type="text" name="categoria" placeholder="Categoria" required>
+        <input type="number" step="0.01" name="valor" placeholder="Valor" required>
+        <select name="tipo">
+            <option value="entrada">Entrada</option>
+            <option value="saida">Saída</option>
+        </select>
+        <button type="submit">Adicionar</button>
+    </form>
+</div>
+
+</div>
+
+<script>
+    const categorias = {{ categorias|tojson }};
+    const receitas = {{ receitas }};
+    const despesas = {{ despesas }};
+    const evolucao = {{ evolucao|tojson }};
+
+    // Pizza (menor tamanho)
+    new Chart(document.getElementById("pizzaChart"), {
+        type: "pie",
+        data: {
+            labels: Object.keys(categorias),
+            datasets: [{
+                data: Object.values(categorias)
+            }]
+        },
+        options: {
+            responsive: false
+        }
+    });
+
+    // Barra
+    new Chart(document.getElementById("barraChart"), {
+        type: "bar",
+        data: {
+            labels: ["Receitas", "Despesas"],
+            datasets: [{
+                label: "Valores em R$",
+                data: [receitas, despesas]
+            }]
+        }
+    });
+
+    // Linha
+    new Chart(document.getElementById("linhaChart"), {
+        type: "line",
+        data: {
+            labels: Object.keys(evolucao),
+            datasets: [{
+                label: "Despesas por Mês",
+                data: Object.values(evolucao),
+                fill: false
+            }]
+        }
+    });
+</script>
+
+</body>
+</html>
